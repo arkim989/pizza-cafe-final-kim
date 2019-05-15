@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<title>Allure Pizza Kim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/w3.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Allure Pizza (Artyom Kim)</a>
+
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      <button id="myBtn" class="w3-bar-item w3-button" style="letter-spacing: 4px;">Take Out</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="myModal" class="modal">
+  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class="takeout">Take Out Menu</p>
+   
+    <p class="pss">Pizza</p>
+   
+    <table>
+  <tr>
+    <td>  <input type="checkbox" class="check-custom"> <span>Margherita<span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Fresh tomatoes, fresh mozzarella, fresh basil)</span></span></td>
+    <td><span>$12.50</span></td>
+  
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="check-custom"><span> Formaggio<span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Fresh tomatoes, mozzarella, chicken, onions)</span></span></td>
+    <td><span>$15.50</span></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="check-custom"><span> Chicken<span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Fresh tomatoes, mozzarella, chicken, onions)</span></span></td>
+    <td><span>$17.00</span></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="check-custom"><span> Pineapple'o'clock<span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil)</span> </span></td>
+    <td><span>$16.50</span></td>
+  </tr>
+    <tr>
+    <td><input type="checkbox" class="check-custom"><span> Meat Town <span style="color: red;">Hot!</span><span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken)</span></span></td>
+    <td><span>$20.00</span></td>
+  </tr>
+    <tr>
+    <td><input type="checkbox" class="check-custom"> <span> Parma <span style="color: green;">New</span><span style="color: grey; font-size: 18px; letter-spacing: 0px;">(Fresh tomatoes, mozzarella, parma, bacon, fresh arugula)</span></span></td>
+    <td><span>21.50</span></td>
+  </tr>
+</table>
+   
+   <p class="pss">Salads / Pasta</p>
+    <table>
+  <tr>
+    <td><input type="checkbox" class="check-custom"><span> Lasagna<span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Special sauce, mozzarella, parmesan, ground beef)</span></span></td>
+    <td><span>$13.50</span></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="check-custom"><span> Ravioli<span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Ravioli filled with cheese)</span></span></td>
+    <td><span>$14.50</span></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="check-custom"><span> Spaghetti Classica<span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Fresh tomatoes, onions, ground beef)</span></span></td>
+    <td><span>$11.00</span></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="check-custom"><span> Seafood pasta<span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Salmon, shrimp, lobster, garlic)</span> </span></td>
+    <td><span>$25.50</span></td>
+  </tr>
+</table>
+
+   <p class="pss">Starters</p>
+    <table>
+    <tr>
+    <td><input type="checkbox" class="check-custom"><span> Today's Soup <span style="color: green;">Seasonal</span><span style="color: grey; font-size: 18px; letter-spacing: 0px;">(Ask the waiter)</span></span></td>
+    <td><span>$5.50</span></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="check-custom"><span> Bruschetta<span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Bread with pesto, tomatoes, onion, garlic)</span></span></td>
+    <td><span>$8.50</span></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="check-custom"><span> Garlic bread<span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Grilled ciabatta, garlic butter, onions)</span></span></td>
+    <td><span>$9.50</span></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="check-custom"><span> Tomozzarella<span style="color: grey; font-size: 18px; letter-spacing: 0px;"> (Tomatoes and mozzarella)</span> </span></td>
+    <td><span>$10.50</span></td>
+  </tr>
+
+</table>
+
+<p class="pss">Take Out Information</p>
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+     <label for="subject">How can we improve your order?</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+<div class="popup" onclick="myFunction()">Order
+  <span class="popuptext" id="myPopup">Thank you, your order will be ready in 20 minutes.</span>
+</div>
+
+
+</div>
+  </form>
+</div>
+  </form>
+</div>
+  </div>
+</div>
+
+
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="images/pizzafront1.jpeg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge" style="color: white;">Allure (open daily 10am - 12pm)</h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="images/pizzaabout.jpeg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About Allure Pizza</h1><br>
+      <h5 class="w3-center">2019</h5>
+      <p class="w3-large">Pizza Allure is made with a soft dough and takes about one minute to cook in a wood-burning oven. Because of this, Pizza Allure has several distinctive characteristics. Pizza in Napoli is soft and foldable and can be considered "wet" by American standards, for this reason the people in Napoli generally eat their pizza with a knife and a fork. Blackened char spots on the pizza crust is a tell-tale sign of Pizza Allure that has been cooked in a blistering hot, wood burning oven. Each pizza is an individual work of art.<br><br>
+
+      Where Some of Our Products Come From
+      We strive to make the most authentic pizza possible. First rate ingredients are essential in creating an authentic pizza. Whenever possible the actual ingredients used in pizzerias in Napoli are imported. When importing is not a possibility we search for the highest quality American products to complete our pizzas. Below is just a sampling of where some of our products come from.
+
+      <p class="w3-large w3-text-grey w3-hide-medium">
+      Flour – Napoli, Italy
+      Prosciutto Cotto – Parma, Italy
+      Tomato – San Marzano (Napoli), Italy
+      Prosciutto Crudo – Parma, Italy
+      Parmesan Cheese – Modena, Italy
+      Pancetta – Salumi, Seattle, WA
+      Salame – Fra’ Mani Berkeley, CA
+      Finnochiona – Salumi, Seattle, WA
+      </p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+<div class="w3-container w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">The Menu</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Salads</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
+      </a>
+
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15.50</span></h1>
+      <p class="w3-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      
+      <h1><b>Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
+      <hr>
+
+      <h1><b>Pineapple'o'clock</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+      <hr>
+
+      <h1><b>Meat Town</b> <span class="w3-tag red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$20.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+      <hr>
+
+      <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
+      <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+      <hr>
+   
+      <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
+      <p class="w3-text-grey">Ravioli filled with cheese</p>
+      <hr>
+      
+      <h1><b>Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
+      <hr>
+
+      <h1><b>Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25.50</span></h1>
+      <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+      <p class="w3-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
+      
+      <h1><b>Garlic bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+      <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
+      <hr>
+      
+      <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
+      <p class="w3-text-grey">Tomatoes and mozzarella</p>
+    </div><br>
+
+  </div>
+</div>
+
+  <hr>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1>Contact</h1><br>
+    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+    <p class="w3-text-blue-grey w3-large"><b>Catering Service, 77 Boylston Street, Boston MA 02116</b></p>
+    <p>You can also contact us by phone (857) 777-08-07 or email catering@allurepizza.com, or you can send us a message here:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>Artyom Kim<br>CMT111</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+
+
+var modal = document.getElementById("myModal");
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>
